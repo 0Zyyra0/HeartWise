@@ -1,0 +1,105 @@
+{
+  "rows_raw": 303,
+  "missing_values": 0,
+  "duplicates": 1,
+  "rows_clean": 302,
+  "class_balance": {
+    "1": 164,
+    "0": 138
+  },
+  "regression": {
+    "target": "thalachh (max heart rate)",
+    "R2": 0.432,
+    "MAE_bpm": 14.87
+  },
+  "classification": [
+    {
+      "model": "Logistic Regression",
+      "cv_acc": 0.826,
+      "test_acc": 0.787,
+      "precision": 0.763,
+      "recall": 0.879,
+      "f1": 0.817,
+      "roc_auc": 0.865,
+      "best_params": {}
+    },
+    {
+      "model": "KNN",
+      "cv_acc": 0.83,
+      "test_acc": 0.803,
+      "precision": 0.756,
+      "recall": 0.939,
+      "f1": 0.838,
+      "roc_auc": 0.9,
+      "best_params": {
+        "n_neighbors": 17
+      }
+    },
+    {
+      "model": "Decision Tree",
+      "cv_acc": 0.789,
+      "test_acc": 0.787,
+      "precision": 0.738,
+      "recall": 0.939,
+      "f1": 0.827,
+      "roc_auc": 0.88,
+      "best_params": {
+        "max_depth": 4,
+        "min_samples_leaf": 10
+      }
+    },
+    {
+      "model": "Random Forest",
+      "cv_acc": 0.851,
+      "test_acc": 0.82,
+      "precision": 0.775,
+      "recall": 0.939,
+      "f1": 0.849,
+      "roc_auc": 0.913,
+      "best_params": {
+        "max_depth": 3,
+        "n_estimators": 100
+      }
+    }
+  ],
+  "best_classifier": "Random Forest",
+  "top_features": {
+    "cp": 0.214,
+    "thall": 0.151,
+    "caa": 0.13,
+    "oldpeak": 0.127,
+    "thalachh": 0.101
+  },
+  "clustering": {
+    "silhouette_by_k": {
+      "2": 0.168,
+      "3": 0.114,
+      "4": 0.119,
+      "5": 0.119,
+      "6": 0.112,
+      "7": 0.103,
+      "8": 0.086
+    },
+    "kmeans_k": 2,
+    "kmeans_disease_rate_per_cluster": {
+      "0": 0.776,
+      "1": 0.113
+    },
+    "hier_disease_rate_per_cluster": {
+      "0": 0.706,
+      "1": 0.165
+    }
+  },
+  "recommender": {
+    "example_patient_index": 0,
+    "similar_patient_indices": [
+      29,
+      221,
+      76,
+      281,
+      106
+    ],
+    "share_of_similar_with_disease": 0.6,
+    "neighbour_majority_agreement": 0.811
+  }
+}

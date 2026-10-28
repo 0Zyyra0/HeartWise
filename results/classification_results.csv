@@ -1,0 +1,5 @@
+model,cv_acc,test_acc,precision,recall,f1,roc_auc,best_params
+Logistic Regression,0.826,0.787,0.763,0.879,0.817,0.865,{}
+KNN,0.83,0.803,0.756,0.939,0.838,0.9,{'n_neighbors': 17}
+Decision Tree,0.789,0.787,0.738,0.939,0.827,0.88,"{'max_depth': 4, 'min_samples_leaf': 10}"
+Random Forest,0.851,0.82,0.775,0.939,0.849,0.913,"{'max_depth': 3, 'n_estimators': 100}"
